@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recomender System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    .navbar {
+        background-color: #2C2C2C;
+        /* Charcoal gray */
+        color: #F5F5DC;
+        border-bottom: 2px solid #4A90E2;
+        /* Adds a stylish border at the bottom */
+    }
+
+    .navbar a {
+        color: #F5F5DC;
+        /* Soft beige */
+        text-decoration: none;
+        padding: 10px 15px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar a:hover {
+        color: #4A90E2;
+        /* Bright white on hover */
+        background-color: #4A90E2;
+        /* Light blue hover effect */
+        border-radius: 5px;
+        /* Rounded corners */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        /* Adds a subtle shadow */
+        transform: scale(1.1);
+        /* Slightly enlarges the link on hover */
+        padding: 10px 20px;
+        /* Adds spacing to make it look prominent */
+    }
+
+    /* Active Link (Optional, for better UX) */
+    .navbar .nav>li>a.active {
+        color: #ffffff;
+        background-color: #4A90E2;
+        font-weight: bold;
+        /* Highlights the active page */
+        border-bottom: 3px solid #ffffff;
+        /* Adds a bottom border to show selection */
+    }
+
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        border: 20px solid #2C2C2C;
+        color: rgb(15, 0, 0);
+    }
+
+    .container {
+        width: 80%;
+        max-width: 600px;
+        margin: 50px auto;
+        background: #2c2c2c;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #fff;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    input,
+    textarea,
+    button {
+        margin-top: 5px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    button {
+        margin-top: 20px;
+        background: #5cb85c;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    button:hover {
+        background: #4cae4c;
+    }
+</style>
+
+
+<body>
+
+    <nav class="navbar">
+        <p class="navbar-brand"><i class="fas fa-book-open"></i> My Book Recommender</p>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+    <div class="container">
+        <h1>Contact & Feedback</h1>
+        <p style="text-align: center;  color:#e74c13;  font-size: 16px;  margin-bottom: 20px;">We value your feedback!
+            Please fill out the form below to share your thoughts or ask any questions.</p>
+        <form action="/submit_feedback" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback"
+                placeholder="Share your feedback about our recommendations"></textarea>
+
+            <label for="suggestions">Suggestions:</label>
+            <textarea id="suggestions" name="suggestions" placeholder="Suggest new books or features"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
